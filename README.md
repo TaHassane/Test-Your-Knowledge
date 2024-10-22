@@ -2,7 +2,9 @@
 
 A full-stack interactive quiz application with user authentication, gender-based profiles, and real-time score tracking. Challenge yourself with various quizzes while enjoying a responsive and intuitive user interface.
 
-![Test Your Knowledge App Screenshot](./src/assets/img/Login.png)
+<div align="center">
+  <img src="./src/assets/img/Login.png" alt="Test Your Knowledge App Screenshot">
+</div>
 
 ## ✨ Features
 
