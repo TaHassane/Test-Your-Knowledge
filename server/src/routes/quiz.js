@@ -4,7 +4,7 @@ const { PrismaClient } = require('@prisma/client');
 const auth = require('../middleware/auth');
 const prisma = new PrismaClient();
 
-// Save quiz result
+// Saving quiz result
 router.post('/results', auth, async (req, res) => {
   try {
     const { score, numberOfQuestions, correctAnswers, wrongAnswers, hintsUsed, fiftyFiftyUsed } = req.body;
@@ -26,7 +26,7 @@ router.post('/results', auth, async (req, res) => {
   }
 });
 
-// Get user's quiz results
+// Get user quiz results
 router.get('/results', auth, async (req, res) => {
   try {
     const results = await prisma.quizResult.findMany({
