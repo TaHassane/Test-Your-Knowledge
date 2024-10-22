@@ -1,47 +1,133 @@
-# Test Your Knowledge
+# Test Your Knowledge 🎯
 
-Welcome to the **Test Your Knowledge** project! This repository contains an interactive quiz application designed to help users test their knowledge on various topics. 
+A full-stack interactive quiz application with user authentication, gender-based profiles, and real-time score tracking. Challenge yourself with various quizzes while enjoying a responsive and intuitive user interface.
 
-## Table of Contents
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
+## ✨ Features
 
-## Features
-- **Interactive Quizzes**: Engage with quizzes that cover a range of topics.
-- **User-Friendly Interface**: Simple and intuitive design for easy navigation.
-- **Score Tracking**: Keep track of your scores and see your progress over time.
+- **User Authentication**
+  - Secure registration and login system
+  - JWT-based authentication
 
-## Technologies Used
-- **HTML**: Structure of the web pages.
-- **CSS**: Styling and layout.
-- **JavaScript**: Functionality and interactivity.
-- **Node.js**: Backend support.
+- **Quiz System**
+  - Interactive quiz interface
+  - Real-time score tracking
+  - Sound effects for correct/incorrect answers
+  - Comprehensive quiz summary
 
-## Installation
-To get started with the project, follow these steps:
+- **User Experience**
+  - Responsive design for all devices
+  - Intuitive navigation
+  - Clean and modern UI
+  - Audio feedback during gameplay
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **React.js** - UI library
+- **Context API** - State management
+- **SCSS** - Styling
+- **Axios** - API communication
+
+### Backend
+- **Express.js** - Server framework
+- **Prisma ORM** - Database management
+- **JWT** - Authentication
+- **Node.js** - Runtime environment
+
+## 📁 Project Structure
+
+```
+├── server/                  # Backend server
+│   ├── prisma/             # Database configurations
+│   │   ├── migrations/     # Database migrations
+│   │   └── schema.prisma   # Prisma schema
+│   └── src/
+│       ├── middleware/     # Auth middleware
+│       └── routes/         # API routes
+├── src/
+│   ├── assets/            # Static assets
+│   │   ├── audio/        # Sound effects
+│   │   └── img/          # Images and profiles
+│   ├── components/       # React components
+│   ├── context/         # React context
+│   ├── services/        # API services
+│   ├── styles/          # SCSS styles
+│   └── utils/           # Utility functions
+```
+
+## 🚀 Installation
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+- PostgreSQL database
+
+### Setup Steps
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/abdelmouu/Test-Your-Knowledge.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd Test-Your-Knowledge
-   ```
-3. Install dependencies (if any):
-   ```bash
-   npm install
-   ```
-
-## Usage
-To run the application, use the following command:
 ```bash
+git clone https://github.com/abdelmouu/Test-Your-Knowledge.git
+cd Test-Your-Knowledge
+```
+
+2. Install frontend dependencies:
+```bash
+npm install
+```
+
+3. Install backend dependencies:
+```bash
+cd server
+npm install
+```
+
+4. Set up environment variables:
+Create `.env` file in server directory:
+```env
+DATABASE_URL="postgresql://user:password@localhost:5432/dbname"
+JWT_SECRET="your-secret-key"
+```
+
+5. Run database migrations:
+```bash
+cd server
+npx prisma migrate dev
+```
+
+## 🎮 Usage
+
+1. Start the backend server:
+```bash
+cd server
+npm run dev
+```
+
+2. Start the frontend application:
+```bash
+# From root directory
 npm start
 ```
-Open your browser and go to `http://localhost:3000` (or the specified port) to start testing your knowledge!
 
-## Contributing
-Contributions are welcome! If you have suggestions for improvements or new features, please fork the repository and submit a pull request.
+The application will be available at `http://localhost:3000`
+
+## 💡 Contributing
+
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/AmazingFeature`
+3. Commit your changes: `git commit -m 'Add some AmazingFeature'`
+4. Push to the branch: `git push origin feature/AmazingFeature`
+5. Open a pull request
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Authors
+
+- Abdallah Moumni
+- Taha Hassane
+
+## 🙏 Acknowledgments
+
+- Thanks to ALX Family
+- Inspired by interactive learning platforms
