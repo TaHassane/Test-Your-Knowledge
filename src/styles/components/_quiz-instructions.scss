@@ -1,0 +1,120 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #333;
+$background-color: #ffffff; // Changed to white
+$border-color: #e0e0e0;
+
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+
+$border-radius: 8px;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+// Mixins
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+  transition: $property $duration $timing;
+}
+
+// Styles
+.instructions {
+  max-width: 800px;
+  margin: $spacing-lg auto;
+  padding: $spacing-lg;
+  background-color: $background-color;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  color: $text-color; // Added to ensure all text within .instructions is dark
+
+  h1 {
+    color: $primary-color; // Kept as is
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: $spacing-lg;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: $spacing-md;
+  }
+
+  ul#main-list {
+    padding-left: $spacing-lg;
+    margin-bottom: $spacing-lg;
+
+    li {
+      margin-bottom: $spacing-md;
+      position: relative;
+
+      &::before {
+        content: '•';
+        color: $primary-color; // Kept as is
+        font-weight: bold;
+        position: absolute;
+        left: -$spacing-lg;
+      }
+    }
+  }
+
+  ul#sublist {
+    padding-left: $spacing-lg;
+    margin-top: $spacing-sm;
+
+    li {
+      margin-bottom: $spacing-sm;
+
+      &::before {
+        content: '○';
+        color: $secondary-color; // Kept as is
+      }
+    }
+  }
+
+  .lifeline-icon {
+    color: $secondary-color; // Kept as is
+    cursor: pointer;
+    margin: 0 $spacing-sm;
+    @include transition(transform);
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $spacing-lg;
+
+    a {
+      text-decoration: none;
+      color: $primary-color; // Kept as is
+      font-weight: bold;
+      padding: $spacing-sm $spacing-md;
+      border: 2px solid $primary-color;
+      border-radius: $border-radius;
+      @include transition(background-color, color);
+
+      &:hover {
+        background-color: $primary-color;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .instructions {
+    padding: $spacing-md;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p, ul#main-list li {
+      font-size: 1rem;
+    }
+  }
+}

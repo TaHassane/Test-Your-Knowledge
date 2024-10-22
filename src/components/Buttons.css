@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
+body, button, input, select, textarea {
+  font-family: 'Orbitron', sans-serif;
+}
+
+:root {
+  --primary-color: #00c2ff; /* Blue */
+  --secondary-color: #ff0000; /* Red - Changed to red */
+  --background-color: #1a1a2e;
+  --text-color: #ffffff;
+  --dark-text-color: #000000; /* New dark color for input text */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px; /* Added margin for spacing */
+}
+
+.login-button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.login-button:hover {
+  background-color: #00a0ff;
+}
+
+.login-button:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+.login-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.logout-button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.logout-button:hover {
+  background-color: #cc0000;
+}
+
+.logout-button:focus {
+  outline: 2px solid var(--secondary-color);
+}
+
+.quiz-button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.quiz-button:hover {
+  background-color: #00a0ff;
+}
+
+.quiz-button:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+h1, h2 {
+  color: var(--primary-color);
+}
+
+input[type="text"] {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--primary-color);
+  color: var(--dark-text-color); /* Changed to dark color */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="text"]::placeholder {
+  color: rgba(0, 0, 0, 0.5); /* Changed to dark semi-transparent */
+}
+
+#home section {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;     
+}
+
+/* Added styles for switch-form-button */
+.switch-form-button {
+  margin-top: 1rem;
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.switch-form-button:hover {
+  background: var(--primary-color);
+  color: white; 
+}
